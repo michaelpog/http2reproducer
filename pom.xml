@@ -20,7 +20,7 @@
         </plugins>
     </build>
     <properties>
-        <vertx.version>3.5.2</vertx.version>
+        <vertx.version>3.5.1</vertx.version>
         <groovy.version>2.4.15</groovy.version>
     </properties>
     <dependencies>

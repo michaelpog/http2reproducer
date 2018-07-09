@@ -25,7 +25,7 @@ public class Client extends AbstractVerticle {
 
         HttpClient client = vertx.createHttpClient(options);
 
-        HttpClientRequest request = client.post(8888, "localhost", "/some_endpoint", resp -> {
+        HttpClientRequest request = client.post(8881, "localhost", "/some_endpoint", resp -> {
             System.out.println("Got response " + resp.statusCode() + " with protocol " + resp.version());
             resp.bodyHandler(body -> System.out.println("Got data " + body.toString("ISO-8859-1")));
         });
@@ -33,7 +33,7 @@ public class Client extends AbstractVerticle {
         request.end("hi from client - 1");
 
 
-        HttpClientRequest request2 = client.post(8888, "localhost", "/some_endpoint", resp -> {
+        HttpClientRequest request2 = client.post(8881, "localhost", "/some_endpoint", resp -> {
             System.out.println("Got response " + resp.statusCode() + " with protocol " + resp.version());
             resp.bodyHandler(body -> System.out.println("Got data " + body.toString("ISO-8859-1")));
         });
